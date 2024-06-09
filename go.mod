@@ -1,3 +1,3 @@
-module github.com/xurvan/go-template
+module protoc-gen-go-std
 
 go 1.22.4

@@ -1,5 +1,5 @@
 # Variables
-BINARY_NAME := hello
+BINARY_NAME := protoc-gen-go-std
 PACKAGE_PATH := cmd/main.go
 BUILD_PATH := bin
 
