@@ -50,12 +50,14 @@ func generateFile(plugin *protogen.Plugin, file *protogen.File) {
 	tmplFile := "templates/endpoint.tmpl"
 	tmpl, err := template.ParseFS(assets.TemplatesFS, tmplFile)
 	if err != nil {
-		panic(err)
+		log.Fatal("Error parsing template:", err)
+		return
 	}
 
 	err = tmpl.Execute(generatedFile, data)
 	if err != nil {
-		panic(err)
+		log.Fatal("Error generating file:", err)
+		return
 	}
 }
 
